@@ -1,0 +1,278 @@
+/* ===========================================================
+   Student Information System (SIS) - Shared Stylesheet
+   Structure based on the provided wireframe ("refer to.png")
+   =========================================================== */
+
+:root {
+  --primary: #1a3e72;        /* dark blue */
+  --primary-dark: #142f57;
+  --accent: #2b6cb0;         /* blue accent */
+  --bg: #1d1d1d;             /* dark page backdrop (as in wireframe) */
+  --panel: #ffffff;          /* white panels/cards */
+  --row-bg: #e9e9e9;         /* light grey rows */
+  --field-bg: #e3e3e3;       /* input fill */
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #cfcfcf;
+  --shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+a { text-decoration: none; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  text-align: center;
+  color: #fff;
+}
+
+.btn:hover { transform: translateY(-1px); text-decoration: none; }
+
+.btn-primary { background: var(--primary); }
+.btn-primary:hover { background: var(--primary-dark); }
+
+.btn-danger { background: #d83a3a; }
+.btn-danger:hover { background: #b82d2d; }
+
+.btn-block { display: block; width: 100%; }
+
+/* ---------- Shared form fields ---------- */
+.form-group { margin-bottom: 16px; }
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--field-bg);
+  border: 1px solid var(--border);
+  border-radius: 30px;          /* rounded "pill" inputs, like wireframe */
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
+}
+
+/* ===========================================================
+   LOGIN PAGE  (narrow card centered on screen)
+   =========================================================== */
+.login-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.login-card {
+  background: var(--panel);
+  width: 100%;
+  max-width: 320px;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 40px 26px;
+}
+
+.login-card .subtitle {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  margin-bottom: 26px;
+  text-transform: uppercase;
+}
+
+/* remember me + forgot password on one line */
+.options-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 0 20px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.remember { display: flex; align-items: center; gap: 6px; }
+.options-row a { color: var(--muted); }
+
+/* ===========================================================
+   HOME PAGE
+   =========================================================== */
+.portal {
+  background: var(--panel);
+  max-width: 760px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* top header bar: centered title + logout on the right */
+.portal-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f3f3;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.portal-header h1 {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text);
+  text-align: center;
+}
+
+.portal-header .btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* stacked full-width rows with icon on the left */
+.row-list {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--row-bg);
+  border-radius: 4px;
+  padding: 18px 22px;
+  transition: background 0.2s ease;
+}
+
+.info-row:hover { background: #dedede; }
+
+.info-row .icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 46px;
+  text-align: center;
+}
+
+.info-row h2 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.info-row p {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ===========================================================
+   REGISTER PAGE
+   =========================================================== */
+.register-wrapper {
+  max-width: 380px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+/* HOME (left) + LOGOUT (right) at the top */
+.top-nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.register-card {
+  background: var(--panel);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 30px 26px;
+}
+
+.register-card .reg-title {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.register-card .reg-title h1 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.register-card .reg-title p {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* HOME (left) + REGISTER (right) at the bottom */
+.bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ===========================================================
+   RESPONSIVE
+   =========================================================== */
+@media (max-width: 600px) {
+  .portal { margin: 16px; }
+
+  .portal-header { flex-direction: column; gap: 12px; }
+  .portal-header .btn { position: static; transform: none; }
+
+  .info-row { flex-direction: row; }
+
+  .info-row h2 { font-size: 0.95rem; }
+}
