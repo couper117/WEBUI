@@ -6,59 +6,80 @@
   <title>Student Registration - SIS</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="register-page">
 
   <div class="register-wrapper">
 
     <div class="top-nav-buttons">
-      <a href="home.html" class="btn btn-primary">Home</a>
+      <a href="home.html" class="btn btn-secondary">← Back Home</a>
       <a href="login.html" class="btn btn-danger">Logout</a>
     </div>
 
     <main class="register-card">
       <div class="reg-title">
-        <h1>Student Registration</h1>
-        <p>Create an account</p>
+        <h1>Student Registration – Create Your Account</h1>
+        <p>Fill in your details to get started.</p>
       </div>
 
       <form action="home.html" method="get">
         <div class="form-group">
+          <label for="fullname">Full Name</label>
           <input type="text" id="fullname" name="fullname" class="form-control"
-                 placeholder="Full Name" required />
+                 placeholder="e.g. Jane Doe" required />
         </div>
 
         <div class="form-group">
+          <label for="studentid">Student ID</label>
           <input type="text" id="studentid" name="studentid" class="form-control"
-                 placeholder="Student ID" required />
+                 placeholder="e.g. SIS-2026-001" required />
         </div>
 
         <div class="form-group">
+          <label for="email">Email Address</label>
           <input type="email" id="email" name="email" class="form-control"
-                 placeholder="Email Address" required />
+                 placeholder="e.g. jane@example.com" required />
         </div>
 
         <div class="form-group">
-          <input type="text" id="faculty" name="faculty" class="form-control"
-                 placeholder="Faculty" required />
+          <label for="faculty">Faculty</label>
+          <select id="faculty" name="faculty" class="form-control" required>
+            <option value="" disabled selected>Select your faculty</option>
+            <option value="science">Faculty of Science</option>
+            <option value="engineering">Faculty of Engineering</option>
+            <option value="business">Faculty of Business</option>
+            <option value="arts">Faculty of Arts &amp; Humanities</option>
+            <option value="medicine">Faculty of Medicine</option>
+            <option value="law">Faculty of Law</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <input type="password" id="password" name="password" class="form-control"
-                 placeholder="Password" required />
+          <label for="password">Password</label>
+          <div class="password-field">
+            <input type="password" id="password" name="password" class="form-control"
+                   placeholder="Create a password" autocomplete="new-password" required />
+            <button type="button" class="toggle-password" aria-label="Show password"
+                    aria-controls="password" aria-pressed="false">👁️</button>
+          </div>
         </div>
 
         <div class="form-group">
-          <input type="password" id="confirm" name="confirm" class="form-control"
-                 placeholder="Confirm Password" required />
+          <label for="confirm">Confirm Password</label>
+          <div class="password-field">
+            <input type="password" id="confirm" name="confirm" class="form-control"
+                   placeholder="Re-enter your password" autocomplete="new-password" required />
+            <button type="button" class="toggle-password" aria-label="Show password"
+                    aria-controls="confirm" aria-pressed="false">👁️</button>
+          </div>
         </div>
 
         <label class="terms">
           <input type="checkbox" name="terms" required />
-          I agree to Terms and Conditions
+          I agree to the Terms and Conditions
         </label>
 
         <div class="bottom-buttons">
-          <a href="home.html" class="btn btn-danger">Home</a>
+          <a href="home.html" class="btn btn-secondary">Back Home</a>
           <button type="submit" class="btn btn-primary">Register</button>
         </div>
       </form>
@@ -66,5 +87,6 @@
 
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>

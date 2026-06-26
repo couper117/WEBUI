@@ -6,48 +6,90 @@
   <title>Student Portal - Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="home-page">
 
-  <section class="portal">
-    <header class="portal-header">
-      <h1>Welcome to the Student Portal</h1>
-      <a href="login.html" class="btn btn-danger">Logout</a>
-    </header>
+  <header class="site-header">
+    <nav class="navbar">
+      <span class="logo">SIS Portal</span>
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="register.html">Register Student</a></li>
+        <li><a href="login.html" class="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="row-list">
+  <main class="portal">
+    <div class="portal-title">
+      <h1>Welcome to Student Portal</h1>
+      <p>Manage students and view records from your dashboard.</p>
+    </div>
+
+    <section class="row-list">
       <a class="info-row" href="home.html">
-        <span class="icon">📊</span>
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="9"></rect>
+            <rect x="14" y="3" width="7" height="5"></rect>
+            <rect x="14" y="12" width="7" height="9"></rect>
+            <rect x="3" y="16" width="7" height="5"></rect>
+          </svg>
+        </span>
         <div>
           <h2>Dashboard</h2>
-          <p>View your overview.</p>
+          <p>View your overview</p>
         </div>
       </a>
 
       <a class="info-row" href="register.html">
-        <span class="icon">👤</span>
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <line x1="19" y1="8" x2="19" y2="14"></line>
+            <line x1="22" y1="11" x2="16" y2="11"></line>
+          </svg>
+        </span>
         <div>
           <h2>Register Student</h2>
-          <p>Add a new student.</p>
+          <p>Add a new student</p>
         </div>
       </a>
 
       <a class="info-row" href="#">
-        <span class="icon">📅</span>
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <line x1="10" y1="9" x2="8" y2="9"></line>
+          </svg>
+        </span>
         <div>
           <h2>Student Information</h2>
-          <p>View student records.</p>
+          <p>View student records</p>
         </div>
       </a>
 
       <a class="info-row" href="#">
-        <span class="icon">⚙️</span>
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+        </span>
         <div>
           <h2>Settings</h2>
-          <p>Manage your preferences.</p>
+          <p>Manage your preferences</p>
         </div>
       </a>
-    </div>
-  </section>
+    </section>
+  </main>
 
 </body>
 </html>
